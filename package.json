@@ -1,0 +1,23 @@
+{
+  "name": "proyecta_flow_crud",
+  "version": "1.0.0",
+  "description": "CRUD básico:Herramienta de Gestión de Proyectos ProyectaFlow",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"node --watch index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Grupo 6:Thomas Luque, Carlos Rodriguez,Gabriel Pretel ,Alaniz Alejandra,Alvaro Ojeda",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  }
+}
