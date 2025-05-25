@@ -42,29 +42,7 @@ const createProyecto = async (req, res) => {
     }
 }
 
-
 const updateProyectoById = async (req, res) => {
-    try {
-        const id = req.params.id;
-        const proyectoEliminado = await Proyecto.findByPk(id);
-        if (proyectoEliminado === null) {
-            res.status(400).json({ status: 400, title: 'Bad Request', message: 'No existe el proyecto buscado' });
-        } else {
-            await Proyecto.destroy({
-                where: {
-                    id
-                },
-            });
-            res.status(200).json({ status: 200, message: `Se elimino correctamente el proyecto con el id: ${id} `, proyectoEliminado })
-        }
-
-    } catch (err) {
-        res.status(500).json({ error: "Error al intentar eliminar proyecto", message: err.message });
-    }
-}
-
-
-const deleteProyectoById = async (req, res) => {
     try {
         const id = req.params.id;
         const { nombre, descripcion, fechaInicio, fechaFin } = req.body;
@@ -93,5 +71,25 @@ const deleteProyectoById = async (req, res) => {
     }
 }
 
+
+const deleteProyectoById = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const proyectoEliminado = await Proyecto.findByPk(id);
+        if (proyectoEliminado === null) {
+            res.status(400).json({ status: 400, title: 'Bad Request', message: 'No existe el proyecto buscado' });
+        } else {
+            await Proyecto.destroy({
+                where: {
+                    id
+                },
+            });
+            res.status(200).json({ status: 200, message: `Se elimino correctamente el proyecto con el id: ${id} `, proyectoEliminado })
+        }
+
+    } catch (err) {
+        res.status(500).json({ error: "Error al intentar eliminar proyecto", message: err.message });
+    }
+}
 
 export { getAllProyectos, getProyectosById, createProyecto, updateProyectoById, deleteProyectoById }
