@@ -7,6 +7,7 @@ import proyectoRoutes from "./src/routes/proyectoRoutes.js";
 import tagRouter from "./src/routes/tagRoutes.js"
 import taskRouter from "./src/routes/taskRoutes.js";
 
+import usuarioRoutes from "./src/routes/usuarioRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -20,6 +21,8 @@ app.use(proyectoRoutes)
 app.use(tagRouter)
 app.use(taskRouter)
 
+
+app.use(usuarioRoutes);
 app.get('/', (req, res) => {
     res.send("¡Backend funcionando!");
 })
