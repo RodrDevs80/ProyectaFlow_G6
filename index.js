@@ -4,7 +4,7 @@ import morgan from "morgan";
 import { sequelize } from "./src/models/index.js";
 import equipoRoutes from "./src/routes/equipoRoutes.js";
 import proyectoRoutes from "./src/routes/proyectoRoutes.js";
-
+import tagRouter from "./src/routes/tagRoutes.js"
 
 
 const app = express();
@@ -16,6 +16,7 @@ app.use(morgan('dev'));
 app.use(equipoRoutes);
 app.use(proyectoRoutes)
 
+app.use(tagRouter)
 
 app.get('/', (req, res) => {
     res.send("¡Backend funcionando!");
