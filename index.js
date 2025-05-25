@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import { sequelize } from "./src/models/index.js";
+import equipoRoutes from "./src/routes/equipoRoutes.js";
+import proyectoRoutes from "./src/routes/proyectoRoutes.js";
 
 
 
@@ -11,6 +13,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
+app.use(equipoRoutes);
+app.use(proyectoRoutes)
 
 
 app.get('/', (req, res) => {
