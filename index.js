@@ -6,6 +6,7 @@ import equipoRoutes from "./src/routes/equipoRoutes.js";
 import proyectoRoutes from "./src/routes/proyectoRoutes.js";
 
 
+import usuarioRoutes from "./src/routes/usuarioRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,6 +18,8 @@ app.use(equipoRoutes);
 app.use(proyectoRoutes)
 
 
+
+app.use(usuarioRoutes);
 app.get('/', (req, res) => {
     res.send("¡Backend funcionando!");
 })
