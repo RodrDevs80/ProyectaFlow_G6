@@ -3,6 +3,7 @@ import { createSubtarea,getSubtareaById,getAllSubtareas,deleteSubtareaById,updat
 
 const subTareaRouter=Router()
 
+
 subTareaRouter.get('/subtareas',getAllSubtareas())
 subTareaRouter.get('/subtarea:id',getSubtareaById())
 subTareaRouter.post('/subtarea',createSubtarea())
