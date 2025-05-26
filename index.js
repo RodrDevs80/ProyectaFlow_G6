@@ -8,7 +8,7 @@ import tagRouter from "./src/routes/tagRoutes.js"
 import taskRouter from "./src/routes/taskRoutes.js";
 import timeLogRouter from "./src/routes/timeLogRoutes.js";
 import hitoRouter from "./src/routes/hitoRoutes.js";
-
+import comentarioRouter from "./src/routes/comentarioRoutes.js";
 import usuarioRoutes from "./src/routes/usuarioRoutes.js";
 import equipoXusuarioRoutes from "./src/routes/equipoXusuarioRoutes.js";
 
@@ -29,6 +29,8 @@ app.use(hitoRouter)
 
 app.use(usuarioRoutes);
 app.use(equipoXusuarioRoutes);
+
+app.use(comentarioRouter)
 app.get('/', (req, res) => {
     res.send("¡Backend funcionando!");
 })
