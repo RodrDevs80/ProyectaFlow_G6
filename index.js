@@ -11,7 +11,7 @@ import hitoRouter from "./src/routes/hitoRoutes.js";
 import comentarioRouter from "./src/routes/comentarioRoutes.js";
 import usuarioRoutes from "./src/routes/usuarioRoutes.js";
 import equipoXusuarioRoutes from "./src/routes/equipoXusuarioRoutes.js";
-
+import subTareaRouter from "./src/routes/subtarea.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -31,6 +31,7 @@ app.use(usuarioRoutes);
 app.use(equipoXusuarioRoutes);
 
 app.use(comentarioRouter)
+app.use(subTareaRouter)
 app.get('/', (req, res) => {
     res.send("¡Backend funcionando!");
 })
