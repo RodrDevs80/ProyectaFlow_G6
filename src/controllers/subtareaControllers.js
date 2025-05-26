@@ -1,4 +1,4 @@
-import SubTarea from "../models/SubTareas";
+import SubTarea from "../models/SubTareas.js";
 
 export const getAllSubtareas = async (req, res) => {
     try {

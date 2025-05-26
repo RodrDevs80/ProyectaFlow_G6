@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createSubtarea,getSubtareaById,getAllSubtareas,deleteSubtareaById,updateSubtareaById} from "../controllers/subtareaControllers";
+import { createSubtarea,getSubtareaById,getAllSubtareas,deleteSubtareaById,updateSubtareaById} from "../controllers/subtareaControllers.js";
 
 const subTareaRouter=Router()
 
