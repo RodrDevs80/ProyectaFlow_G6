@@ -5,9 +5,9 @@ const subTareaRouter = Router()
 
 
 subTareaRouter.get('/subtareas', getAllSubtareas)
-subTareaRouter.get('/subtarea:id', getSubtareaById)
+subTareaRouter.get('/subtarea/:id', getSubtareaById)
 subTareaRouter.post('/subtarea', createSubtarea)
-subTareaRouter.put('/subtarea:id', deleteSubtareaById)
-subTareaRouter.delete('/subtara:id', updateSubtareaById)
+subTareaRouter.put('/subtarea/:id', deleteSubtareaById)
+subTareaRouter.delete('/subtara/:id', updateSubtareaById)
 
 export default subTareaRouter
