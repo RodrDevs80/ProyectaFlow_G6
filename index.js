@@ -12,6 +12,8 @@ import comentarioRouter from "./src/routes/comentarioRoutes.js";
 import usuarioRoutes from "./src/routes/usuarioRoutes.js";
 import equipoXusuarioRoutes from "./src/routes/equipoXusuarioRoutes.js";
 import subTareaRouter from "./src/routes/subtareaRuotes.js";
+import tareaXtagRouter from "./src/routes/tareaXtagRoutes.js"
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -32,6 +34,9 @@ app.use(equipoXusuarioRoutes);
 
 app.use(comentarioRouter)
 app.use(subTareaRouter)
+
+app.use(tareaXtagRouter)
+
 app.get('/', (req, res) => {
     res.send("¡Backend funcionando!");
 })
