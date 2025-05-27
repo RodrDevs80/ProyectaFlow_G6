@@ -82,7 +82,7 @@ const deleteEquipoById = async (req, res) => {
                     id
                 },
             });
-            res.status(200).json({ status: 200, message: `Se elimino correctamente el equipo con el id: ${id} `, camioneroEliminado })
+            res.status(200).json({ status: 200, message: `Se elimino correctamente el equipo con el id: ${id} `, equipoEliminado })
         }
 
     } catch (err) {

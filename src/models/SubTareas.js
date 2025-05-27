@@ -16,7 +16,7 @@ const SubTarea = sequelize.define("SubTarea", {
             model: "tareas",
             key: "id"
         }
-    }
+    },
 }, { tableName: "subTareas", timestamps: false });
 
 

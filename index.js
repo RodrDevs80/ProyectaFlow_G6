@@ -13,10 +13,12 @@ import usuarioRoutes from "./src/routes/usuarioRoutes.js";
 import equipoXusuarioRoutes from "./src/routes/equipoXusuarioRoutes.js";
 import subTareaRouter from "./src/routes/subtareaRuotes.js";
 import tareaXtagRouter from "./src/routes/tareaXtagRoutes.js"
+import swaggerUi from "swagger-ui-express";
+import swaggerFile from "./swagger_output.json" with { type: "json" };
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
