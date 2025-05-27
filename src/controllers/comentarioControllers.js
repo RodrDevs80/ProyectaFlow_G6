@@ -40,7 +40,7 @@ export const deleteComentarioById = async (req, res) => {
                     id
                 },
             });
-            res.status(200).json({ status: 200, message: `Se elimino correctamente el comentario con el id: ${id} `, camioneroEliminado })
+            res.status(200).json({ status: 200, message: `Se elimino correctamente el comentario con el id: ${id} `,comentarioEliminado })
         }
 
     } catch (err) {
